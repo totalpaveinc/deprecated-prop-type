@@ -1,10 +1,9 @@
 import * as warning from 'warning';
-import {IDictionary} from '@totalpave/interfaces';
 
-let warned: IDictionary<boolean> = {};
+let warned: Record<string, boolean> = {};
 
 export interface IValidateFunction {
-    (props: any, propName: string, componentName: string, ...rest: Array<any>): any;
+    (props: any, propName: string, componentName: string, ...rest: any[]): any;
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
