@@ -1,10 +1,9 @@
-/* eslint-disable no-console */
 
 import * as propTypes from 'prop-types';
 import {deprecated} from '../src/deprecated';
 
 beforeEach(() => {
-    spyOn(console, 'error');
+    jest.spyOn(console, 'error');
 });
 
 it('logs an error when deprecated prop is passed', () => {

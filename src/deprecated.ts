@@ -6,7 +6,6 @@ export interface IValidateFunction {
     (props: any, propName: string, componentName: string, ...rest: any[]): any;
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function deprecated(propType: any, explanation: string): IValidateFunction {
     return function validate(props, propName, componentName, ...rest) { // Note ...rest here
         if (props[propName] !== null && props[propName] !== undefined) {
@@ -22,7 +21,7 @@ export function deprecated(propType: any, explanation: string): IValidateFunctio
 }
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
-function _resetWarned() {
+function _resetWarned(): void {
     warned = {};
 }
 
