@@ -1,0 +1,4 @@
+allowBuilds:
+  unrs-resolver: true
+configDependencies:
+  '@totalpave/pnpm-plugin-config': 0.1.0
